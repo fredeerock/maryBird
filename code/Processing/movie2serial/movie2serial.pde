@@ -68,7 +68,9 @@ void setup() {
     gammatable[i] = (int)(pow((float)i / 255.0, gamma) * 255.0 + 0.5);
   }
   size(480, 400, P2D);  // create the window
-  myMovie = new GLMovie(this, "/home/pi/Videos/asdf3.mp4");
+  String mpath = sketchPath() + "/../../../media/slowgrad.mp4";
+  println(mpath);
+  myMovie = new GLMovie(this, mpath);
   myMovie.loop();  // start the movie :-)
 }
 
